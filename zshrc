@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="simple"
 
 # Use Vim as an editor
 export EDITOR=vim
