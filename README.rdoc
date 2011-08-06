@@ -1,0 +1,3 @@
+= Martin Desrosiers Dot Files
+
+Setup my dot files for things like zsh, Vim, Git, etc.. I got the Rakefile from Ryan Bates's dotfiles project.
