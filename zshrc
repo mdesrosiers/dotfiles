@@ -11,5 +11,10 @@ plugins=(brew bundler gem git osx rake)
 
 source $ZSH/oh-my-zsh.sh
 
+alias ll='ls -lh'
+alias l='ls -lah'
+alias b='bundle exec'
+alias brake='bundle exec rake'
+
 # RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
