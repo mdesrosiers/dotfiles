@@ -16,5 +16,7 @@ alias l='ls -lah'
 alias b='bundle exec'
 alias brake='bundle exec rake'
 
+export PATH=$HOME/bin:$PATH
+
 # RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
