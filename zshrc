@@ -7,7 +7,7 @@ ZSH_THEME="simple"
 # Use Vim as an editor
 export EDITOR=vim
 
-plugins=(brew bundler gem git osx rake)
+plugins=(brew bundler gem git osx rails3 rake ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -16,7 +16,6 @@ alias l='ls -lah'
 alias b='bundle exec'
 alias brake='bundle exec rake'
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/bin:$PATH
 
-# RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+eval "$(rbenv init -)"
