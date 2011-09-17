@@ -8,8 +8,6 @@ Setup my dot files for things like zsh, Vim, Git, etc.. I got the Rakefile from 
 
   git clone git://github.com/mdesrosiers/dotfiles ~/.dotfiles
   cd ~/.dotfiles
-  git submodules init
-  git submodules update
   rake install
 
 === Install Janus
