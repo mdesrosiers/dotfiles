@@ -54,7 +54,7 @@
   url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "vim/bundle/bundler"]
   path = vim/bundle/bundler
-  url = https://github.com/tpope/vim-vim/bundler.git
+  url = https://github.com/tpope/vim-bundler.git
 [submodule "vim/bundle/endwise"]
   path = vim/bundle/endwise
   url = https://github.com/tpope/vim-endwise.git
