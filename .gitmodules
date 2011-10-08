@@ -61,3 +61,9 @@
 [submodule "vim/bundle/command-t"]
   path = vim/bundle/command-t
   url = https://github.com/wincent/Command-T.git
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/repeat"]
+	path = vim/bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
