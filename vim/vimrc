@@ -12,12 +12,19 @@ endfunction
 
 let s:current_file = expand("<sfile>:p")
 
+""
+"" Pathogen Setup
+""
+
 function s:add_group(name)
   let resolved = resolve(s:current_file)
   let dir = fnamemodify(resolved, ":h")
   let file = dir . "/" . a:name
   call pathogen#runtime_prepend_subdirectories(file)
 endfunction
+
+call pathogen#runtime_append_all_bundles()
+
 
 ""
 "" Customizations
@@ -27,18 +34,6 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
-
-""
-"" Pathogen Setup
-""
-
-call s:add_group("janus-core")
-call s:add_group("janus-langs")
-call s:add_group("janus-tools")
-call s:add_group("janus-colors")
-call s:add_group("janus-command-t")
-
-call pathogen#runtime_append_all_bundles()
 
 ""
 "" Basic Setup
@@ -113,6 +108,13 @@ endif
 "" CommandT
 ""
 let g:CommandTMaxHeight=40
+"" remove specific folders from the autcomplete to speed up command-T
+set wig=tmp/*,log/*,db/sphinx/*
+
+""
+"" Ack
+""
+map <D-F> :Ack<space>
 
 ""
 "" NERDTree
