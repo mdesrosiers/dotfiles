@@ -104,8 +104,12 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Move lines up and down
-map <A-j> :m +1 <CR>
-map <A-k> :m -2 <CR>
+nnoremap <C-j> :m+<CR>==
+nnoremap <C-k> :m-2<CR>==
+inoremap <C-j> <Esc>:m+<CR>==gi
+inoremap <C-k> <Esc>:m-2<CR>==gi
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
 
 " remember last position in file
 " see :help last-position-jump
@@ -119,7 +123,7 @@ endif
 ""
 let g:CommandTMaxHeight=40
 "" remove specific folders from the autcomplete to speed up command-T
-set wig=tmp/*,log/*,db/sphinx/*
+set wig=tmp/*,log/*,db/sphinx/*,*.gif,*.png,*.jpg
 
 ""
 "" Ack
