@@ -97,6 +97,16 @@ set laststatus=2  " always show the status bar
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+" Navigate splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Move lines up and down
+map <A-j> :m +1 <CR>
+map <A-k> :m -2 <CR>
+
 " remember last position in file
 " see :help last-position-jump
 if has("autocmd")
