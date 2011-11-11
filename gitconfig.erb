@@ -1,0 +1,27 @@
+[user]
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  signingkey = FBFC3AD42CD65316
+[core]
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+[color]
+  ui = auto
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
+  oneline = log --pretty='%Cblue%h%Creset - %an - %Cgreen%s%Creset'
+  rb = rebase
+  who = shortlog -s --
+[branch]
+  autosetuprebase = always
+[github]
+  user = <%= print("Github Username: "); STDOUT.flush; STDIN.gets.chomp %>
+  token = <%= print("Github API Token: "); STDOUT.flush; STDIN.gets.chomp %>
