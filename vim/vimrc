@@ -32,6 +32,7 @@ set noswapfile
 colorscheme solarized
 
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
+let mapleader=","
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
@@ -60,12 +61,18 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set noequalalways
 
 " Move lines up and down
-nnoremap <C-j> :m+<CR>==
-nnoremap <C-k> :m-2<CR>==
-inoremap <C-j> <Esc>:m+<CR>==gi
-inoremap <C-k> <Esc>:m-2<CR>==gi
-vnoremap <C-j> :m'>+<CR>gv=gv
-vnoremap <C-k> :m-2<CR>gv=gv
+"nnoremap <C-j> :m+<CR>==
+"nnoremap <C-k> :m-2<CR>==
+"inoremap <C-j> <Esc>:m+<CR>==gi
+"inoremap <C-k> <Esc>:m-2<CR>==gi
+"vnoremap <C-j> :m'>+<CR>gv=gv
+"vnoremap <C-k> :m-2<CR>gv=gv
+
+" Navigate between split windows
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " remember last position in file
 " see :help last-position-jump
@@ -77,6 +84,7 @@ endif
 ""
 "" CommandT
 ""
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 let g:CommandTMaxHeight=40
 "" remove specific folders from the autcomplete to speed up command-T
 set wig=tmp/*,log/*,db/sphinx/*,*.gif,*.png,*.jpg
@@ -95,7 +103,7 @@ let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMouseMode=2
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>f :NERDTreeFind<CR>
+map <Leader>N :NERDTreeFind<CR>
 
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
