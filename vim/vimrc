@@ -84,7 +84,7 @@ endif
 ""
 "" CommandT
 ""
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>t :CommandT<cr>
 let g:CommandTMaxHeight=40
 "" remove specific folders from the autcomplete to speed up command-T
 set wig=tmp/*,log/*,db/sphinx/*,*.gif,*.png,*.jpg
@@ -103,7 +103,7 @@ let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMouseMode=2
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>N :NERDTreeFind<CR>
+map <Leader>f :NERDTreeFind<CR>
 
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
