@@ -1,9 +1,8 @@
 require 'rake'
 require 'erb'
-require File.join(File.dirname(__FILE__), 'vim', 'Rakefile')
-#require 'vim/Rakefile'
+import 'vim/Rakefile'
 
-task :default => [:install, vim:setup] do
+task :default => [:install, :vim] do
 end
 
 desc "Install the dot files into user's home directory"
