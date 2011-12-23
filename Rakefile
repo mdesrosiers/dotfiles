@@ -1,6 +1,7 @@
 require 'rake'
 require 'erb'
-require 'vim/Rakefile'
+require File.join(File.dirname(__FILE__), 'vim', 'Rakefile')
+#require 'vim/Rakefile'
 
 task :default => [:install, vim:setup] do
 end
