@@ -36,6 +36,11 @@ task :install do
   end
 end
 
+desc "Update submodules"
+task :update do
+ system "git submodule foreach git pull"
+end
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)
