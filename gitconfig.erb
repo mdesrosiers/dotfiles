@@ -24,3 +24,9 @@
 [github]
   user = <%= print("Github Username: "); STDOUT.flush; STDIN.gets.chomp %>
   token = <%= print("Github API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+[merge]
+  tool=opendiff
+[mergetool]
+  keepbackup = false
+  keeptemporaries = false
+  prompt = false
