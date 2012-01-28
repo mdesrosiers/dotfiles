@@ -7,7 +7,7 @@ ZSH_THEME="simple"
 # Use Vim as an editor
 export EDITOR=vim
 
-plugins=(brew bundler gem git osx rails3 rake ruby)
+plugins=(autojump brew bundler gem git osx rails3 rake ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,10 +19,6 @@ alias l='ls -lah'
 alias b='bundle exec'
 alias brake='bundle exec rake'
 alias bundle="noglob bundle"
-
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
 
 # GC tuning for REE
 export RUBY_HEAP_MIN_SLOTS=1000000
