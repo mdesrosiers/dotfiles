@@ -16,8 +16,6 @@ cdpath=($HOME/work)
 
 alias ll='ls -lh'
 alias l='ls -lah'
-alias b='bundle exec'
-alias brake='bundle exec rake'
 alias bundle="noglob bundle"
 
 # GC tuning for REE
