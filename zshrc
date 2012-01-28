@@ -11,9 +11,6 @@ plugins=(autojump brew bundler gem git osx rails3 rake ruby)
 
 source $ZSH/oh-my-zsh.sh
 
-setopt auto_cd
-cdpath=($HOME/work)
-
 alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
