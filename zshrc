@@ -12,6 +12,4 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
 
-bindkey -v
-
 eval "$(rbenv init -)"
