@@ -25,8 +25,18 @@
   user = <%= print("Github Username: "); STDOUT.flush; STDIN.gets.chomp %>
   token = <%= print("Github API Token: "); STDOUT.flush; STDIN.gets.chomp %>
 [merge]
-  tool=opendiff
+  tool = fugitive
 [mergetool]
   keepbackup = false
   keeptemporaries = false
+  prompt = false
+[mergetool "fugitive"]
+  cmd = mvim "+Gdiff" $MERGED
+  trustExitCode = false
+  keepBackup = false
+  prompt = false
+[mergetool "p4merge"]
+  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  trustExitCode = false
+  keepBackup = false
   prompt = false
