@@ -8,5 +8,8 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 export RUBY_FREE_MIN=$RUBY_HEAP_FREE_MIN
 
-typeset -U path
+export OPSCODE_USER="mdesrosiers"
+export OPSCODE_ORGNAME="partnerpedia"
+
 path=(~/bin /usr/local/bin $path)
+typeset -U path
