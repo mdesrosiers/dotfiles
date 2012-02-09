@@ -10,6 +10,3 @@ export RUBY_FREE_MIN=$RUBY_HEAP_FREE_MIN
 
 export OPSCODE_USER="mdesrosiers"
 export OPSCODE_ORGNAME="partnerpedia"
-
-path=(~/bin /usr/local/bin $path)
-typeset -U path
