@@ -11,8 +11,3 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
-
-path=(~/bin /usr/local/bin $path)
-typeset -U path
-
-eval "$(rbenv init -)"
