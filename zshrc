@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Set theme
 ZSH_THEME="simple"
 
