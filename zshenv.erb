@@ -11,7 +11,7 @@ export RUBY_FREE_MIN=$RUBY_HEAP_FREE_MIN
 export OPSCODE_USER="mdesrosiers"
 export OPSCODE_ORGNAME="partnerpedia"
 
-export MERGE_MASTER_OAUTH_TOKEN=<%= print("MergeMaster Oauth Token: "); STDOUT.flush; STDIN.gets.chomp %>"
+export MERGE_MASTER_OAUTH_TOKEN="<%= print("MergeMaster Oauth Token: "); STDOUT.flush; STDIN.gets.chomp %>"
 
 path=(~/bin /usr/local/bin $path)
 typeset -U path
