@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+TERM=screen-256color
+DISABLE_AUTO_TITLE="true"
+
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Set theme
