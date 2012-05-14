@@ -11,13 +11,20 @@ ZSH_THEME="simple"
 
 plugins=(autojump brew bundler gem git osx rails3 rake ruby)
 
+coreutils=$(brew --prefix coreutils)/libexec/gnubin
+
+path=(~/bin $coreutils /usr/local/bin $path)
+
 source $ZSH/oh-my-zsh.sh
+
+# Enable color for ls
+eval $(dircolors ~/.dir_colors)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
 
-path=(~/bin /usr/local/bin $path)
 typeset -U path
 
 eval "$(rbenv init -)"
