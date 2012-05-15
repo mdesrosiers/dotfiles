@@ -12,8 +12,10 @@ ZSH_THEME="simple"
 plugins=(autojump brew bundler gem git osx rails3 rake ruby)
 
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
+postgresql=/Applications/Postgres.app/Contents/MacOS/bin
 
-path=(~/bin $coreutils /usr/local/bin $path)
+path=(~/bin $coreutils $postgresql /usr/local/bin $path)
+typeset -U path
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,10 +26,5 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
-
-postgres=/Applications/Postgres.app/Contents/MacOS/bin
-
-path=(~/bin $postgres /usr/local/bin $path)
-typeset -U path
 
 eval "$(rbenv init -)"
