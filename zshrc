@@ -13,8 +13,10 @@ plugins=(autojump brew bundler gem git osx rails3 rake ruby)
 
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
 postgresql=/Applications/Postgres.app/Contents/MacOS/bin
+android_tools=/Users/mdesrosiers/android-sdks/tools
+android_platform_tools=/Users/mdesrosiers/android-sdks/platform-tools
 
-path=(~/bin $coreutils $postgresql /usr/local/bin $path)
+path=(~/bin $coreutils $postgresql $android_tools $android_platform_tools /usr/local/bin $path)
 typeset -U path
 
 source $ZSH/oh-my-zsh.sh
