@@ -9,7 +9,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 # Set theme
 ZSH_THEME="simple"
 
-plugins=(autojump brew bundler gem git osx rails3 rake ruby)
+plugins=(autojump brew bundler gem git github osx rails3 rake ruby)
 
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
 postgresql=/Applications/Postgres.app/Contents/MacOS/bin
