@@ -6,15 +6,17 @@ DISABLE_AUTO_TITLE="true"
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+alias mci="mvn clean install"
+alias mcp="mvn clean package"
+alias mee="mvn eclipse:eclipse"
+
 # Set theme
 ZSH_THEME="simple"
 
-plugins=(autojump brew bundler gem git github heroku osx rails3 rake ruby vagrant)
+plugins=(autojump brew bundler gem git github mvn heroku osx rails3 rake ruby vagrant)
 
 maven=/usr/local/maven
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
-android_tools=/Users/mdesrosiers/android-sdks/tools
-android_platform_tools=/Users/mdesrosiers/android-sdks/platform-tools
 
 path=(~/bin $maven/bin $coreutils $android_tools $android_platform_tools /usr/local/bin $path)
 typeset -U path

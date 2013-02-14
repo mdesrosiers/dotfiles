@@ -1,8 +1,7 @@
 require 'rake'
 require 'erb'
-import 'vim/Rakefile'
 
-task :default => [:install, :vim] do
+task :default => [:install] do
 end
 
 desc "Install the dot files into user's home directory"
@@ -14,31 +13,26 @@ task :install do
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
         puts "identical ~/.#{file.sub('.erb', '')}"
-    elsif replace_all
-      replace_file(file)
-    else
-      print "overwrite ~/.#{file.sub('.erb', '')}? [ynaq] "
-      case $stdin.gets.chomp
-      when 'a'
-        replace_all = true
+      elsif replace_all
         replace_file(file)
-      when 'y'
-        replace_file(file)
-      when 'q'
-        exit
       else
-        puts "skipping ~/.#{file.sub('.erb', '')}"
+        print "overwrite ~/.#{file.sub('.erb', '')}? [ynaq] "
+        case $stdin.gets.chomp
+        when 'a'
+          replace_all = true
+          replace_file(file)
+        when 'y'
+          replace_file(file)
+        when 'q'
+          exit
+        else
+          puts "skipping ~/.#{file.sub('.erb', '')}"
+        end
       end
-    end
     else
       link_file(file)
     end
   end
-end
-
-desc "Update submodules"
-task :update do
-  system "git submodule foreach git pull"
 end
 
 def replace_file(file)
