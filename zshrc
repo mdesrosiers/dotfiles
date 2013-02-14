@@ -18,7 +18,7 @@ plugins=(autojump brew bundler gem git github mvn heroku osx rails3 rake ruby va
 maven=/usr/local/maven
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
 
-path=(~/bin $maven/bin $coreutils $android_tools $android_platform_tools /usr/local/bin $path)
+path=(~/bin $coreutils /usr/local/bin $path)
 typeset -U path
 
 source $ZSH/oh-my-zsh.sh
