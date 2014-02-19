@@ -51,3 +51,6 @@ export MONGODB_HOME="/usr/local/mongodb"
 export PATH="/Users/mdesrosiers/bin:$MAVEN_HOME/bin:$GRAILS_HOME/bin:$MONGODB_HOME/bin:$MYSQL_HOME/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mdesrosiers/.gvm/bin/gvm-init.sh" ]] && source "/Users/mdesrosiers/.gvm/bin/gvm-init.sh"
