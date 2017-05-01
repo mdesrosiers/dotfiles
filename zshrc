@@ -19,18 +19,24 @@ alias mee="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 # Set theme
 ZSH_THEME="simple"
 
-plugins=(brew gem git github mvn osx)
+plugins=(brew jsontools git mvn osx tmux)
 
 . `brew --prefix`/etc/profile.d/z.sh
 
-[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 coreutils=$(brew --prefix coreutils)/libexec/gnubin
 
-path=(~/bin $coreutils /usr/local/bin /usr/local/sbin $path)
+javahome=/Library/Java/JavaVirtualMachines/Current/Contents/Home
+
+path=(~/bin $javahome/bin $coreutils /usr/local/bin /usr/local/sbin /usr/local/heroku/bin $path)
 typeset -U path
 
 source $ZSH/oh-my-zsh.sh
+
+# nvm
+# [ -s "/Users/mdesrosiers/.nvm/nvm.sh" ] && . "/Users/mdesrosiers/.nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)
@@ -40,8 +46,4 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/mdesrosiers/.gvm/bin/gvm-init.sh" ]] && source "/Users/mdesrosiers/.gvm/bin/gvm-init.sh"
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

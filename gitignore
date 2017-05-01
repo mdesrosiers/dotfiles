@@ -18,7 +18,7 @@
 *.jar
 *.rar
 *.tar
-*.zip
+#*.zip
 
 # Logs and databases #
 ######################
@@ -29,7 +29,6 @@
 # OS generated files #
 ######################
 .DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
@@ -51,16 +50,13 @@ Thumbs.db
 *~
 .ruby-version
 .netrwhist
-*.iml
-.idea/
 target/
 
-# PingFederate #
-#####################
-pingfederate/
-reference-files/
-utility-jar/
-db/
-Holder.html
-Holder.page
-pf-server/HuronPeak/server/protocol-engine/src/test/resources/data/
+# Javascript #
+.bower-cache/
+.nvmrc
+.tern-project
+.scss-lint.yml
+.vscode
+jsconfig.json
+
