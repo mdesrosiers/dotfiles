@@ -1,8 +1,10 @@
 [user]
-  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  name = <%= print("Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Email: "); STDOUT.flush; STDIN.gets.chomp %>
+  signingkey = <%= print("Signing Key: "); STDOUT.flush; STDIN.gets.chomp %>
 [core]
-  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  excludesfile = /Users/mdesrosiers/.gitignore
+  autocrlf = input
 [color]
   ui = auto
 [alias]
@@ -17,25 +19,30 @@
   ls = ls-files
   hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
   oneline = log --pretty='%Cblue%h%Creset - %an - %Cgreen%s%Creset'
+  recap = log --all --oneline --no-merges --author=mdesrosiers@pingidentity.com
+  today = log --since=00:00:00 --all --no-merges --oneline --author=mdesrosiers@pingidentity.com
   rb = rebase
-  who = shortlog -s --
+  who = shortlog -sn
 [branch]
   autosetuprebase = always
+[push]
+  default = simple
 [github]
-  user = <%= print("Github Username: "); STDOUT.flush; STDIN.gets.chomp %>
+  user = mdesrosiers
 [mergetool]
   keepbackup = false
   keeptemporaries = false
   prompt = false
-[mergetool "fugitive"]
-  cmd = mvim "+Gdiff" $MERGED
-  trustExitCode = false
-  keepBackup = false
-  prompt = false
-[mergetool "p4merge"]
-  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-  trustExitCode = false
-  keepBackup = false
-  prompt = false
-[push]
-  default = current
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[status]
+  submodulesummary = 1
+[diff]
+  submodule = log
+[commit]
+  template = /Users/mdesrosiers/.stCommitMsg
+  gpgsign = false
