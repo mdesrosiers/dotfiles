@@ -1,6 +1,6 @@
 # Martin Desrosiers Dot Files
 
-Setup my dot files for things like zsh, Vim, Git, etc.. The Rakefile was taken from Ryan Bates's dotfiles project.
+Setup my dot files for things like zsh, Vim, Git, etc.
 
 ## Installation
 
