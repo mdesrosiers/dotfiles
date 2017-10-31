@@ -27,7 +27,9 @@ coreutils=$(brew --prefix coreutils)/libexec/gnubin
 
 javahome=/Library/Java/JavaVirtualMachines/Current/Contents/Home
 
-path=(~/bin $javahome/bin $coreutils /usr/local/bin /usr/local/sbin /usr/local/heroku/bin $path)
+yarn=~/.config/yarn/global/node_modules/.bin
+
+path=(~/bin $javahome/bin $coreutils $yarn /usr/local/bin /usr/local/sbin $path)
 typeset -U path
 
 source $ZSH/oh-my-zsh.sh
@@ -46,4 +48,16 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias bundle="noglob bundle"
 
+# fzf
+source /usr/local/opt/fzf/shell/key-bindings.zsh
+source /usr/local/opt/fzf/shell/completion.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='
+--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+--color info:108,prompt:109,spinner:108,pointer:168,marker:168
+'
+
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+

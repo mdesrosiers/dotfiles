@@ -53,10 +53,12 @@ Thumbs.db
 target/
 
 # Javascript #
+node_modules/
 .bower-cache/
 .nvmrc
 .tern-project
 .scss-lint.yml
 .vscode
+*.min.js
 jsconfig.json
 
