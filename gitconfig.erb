@@ -1,7 +1,6 @@
 [user]
   name = <%= print("Name: "); STDOUT.flush; STDIN.gets.chomp %>
   email = <%= print("Email: "); STDOUT.flush; STDIN.gets.chomp %>
-  signingkey = <%= print("Signing Key: "); STDOUT.flush; STDIN.gets.chomp %>
 [core]
   excludesfile = /Users/mdesrosiers/.gitignore
   autocrlf = input
@@ -19,8 +18,6 @@
   ls = ls-files
   hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
   oneline = log --pretty='%Cblue%h%Creset - %an - %Cgreen%s%Creset'
-  recap = log --all --oneline --no-merges --author=mdesrosiers@pingidentity.com
-  today = log --since=00:00:00 --all --no-merges --oneline --author=mdesrosiers@pingidentity.com
   rb = rebase
   who = shortlog -sn
 [branch]
@@ -43,6 +40,3 @@
   submodulesummary = 1
 [diff]
   submodule = log
-[commit]
-  template = /Users/mdesrosiers/.stCommitMsg
-  gpgsign = false
