@@ -25,4 +25,6 @@ export M2_REPO="$HOME/.m2/repository"
 
 export PATH="/Users/mdesrosiers/bin:$MAVEN_HOME/bin:$PATH"
 
-[ -s "/Users/mdesrosiers/.nvm/nvm.sh" ] && . "/Users/mdesrosiers/.nvm/nvm.sh"
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

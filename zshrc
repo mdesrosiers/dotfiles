@@ -29,15 +29,16 @@ javahome=/Library/Java/JavaVirtualMachines/Current/Contents/Home
 
 yarn=~/.config/yarn/global/node_modules/.bin
 
-path=(~/bin $javahome/bin $coreutils $yarn /usr/local/bin /usr/local/sbin $path)
+python3=~/Library/Python/3.6/bin
+
+path=(~/bin $javahome/bin $coreutils $yarn $python3 /usr/local/bin /usr/local/sbin $path)
 typeset -U path
 
 source $ZSH/oh-my-zsh.sh
 
 # nvm
-# [ -s "/Users/mdesrosiers/.nvm/nvm.sh" ] && . "/Users/mdesrosiers/.nvm/nvm.sh"
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 
 # Enable color for ls
