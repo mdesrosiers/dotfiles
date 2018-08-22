@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 TERM=screen-256color
 DISABLE_AUTO_TITLE="true"
 
@@ -14,7 +16,6 @@ alias mcpst="mvn clean package -Dmaven.test.skip=true"
 alias mct="mvn clean test"
 alias mdt="mvn dependency:tree"
 alias mee="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
-#alias -g st="-Dmaven.test.skip=true"
 
 # Set theme
 ZSH_THEME="simple"

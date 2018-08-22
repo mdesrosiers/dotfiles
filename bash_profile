@@ -1,5 +1,3 @@
-#!/bin/bash
-
 . ~/.bash_aliases
 
 EDITOR=vim
@@ -8,15 +6,8 @@ EDITOR=vim
 export PS1="\[\e]2;\u@\H \a\e[32;1m\]\w>\[\e[0m\] "
 
 # Java
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/Current"
 export JAVA_VERSION=1.8
-export JAVA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7677 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
-export JAVA_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=n"
-export JAVA_SNMP_OPTS="-Dcom.sun.management.snmp.interface=0.0.0.0 -Dcom.sun.management.snmp.port=7885 -Dcom.sun.management.snmp.acl=false"
-export JAVA_OPTS="-Xms128m -Xmx1024m $JAVA_DEBUG_OPTS"
-
-# Ant
-export ANT_OPTS="-Xmx1024m"
 
 # Maven
 export MAVEN_HOME="/usr/local/maven"
@@ -27,4 +18,10 @@ export PATH="/Users/mdesrosiers/bin:$MAVEN_HOME/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# update PATH to include personal bin if it exists
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+
+source ~/.bashrc
