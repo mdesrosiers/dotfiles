@@ -107,6 +107,13 @@ alias mct="mvn clean test"
 alias mdt="mvn dependency:tree"
 alias mee="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 
+# Wave
+alias mfcs="make force_clean setup"
+alias mcs="make clean setup"
+alias mww="make wave.watch"
+alias rtw="npm run test-watch"
+alias qs="DATA_DIR=~/git/insights/WaveUI/WaveCommon/repo bash queryServer.sh"
+
 # fzf
 source /usr/local/opt/fzf/shell/key-bindings.zsh
 source /usr/local/opt/fzf/shell/completion.zsh
@@ -119,14 +126,13 @@ export FZF_DEFAULT_OPTS='
 '
 source ~/.iterm2_shell_integration.zsh
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 if [ -f /Users/martin.desrosiers/.ansible/env.sh ]; then
     . /Users/martin.desrosiers/.ansible/env.sh
     # To disable ansible, comment out, but do not delete the following:
     # activate_ansible
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
