@@ -14,8 +14,6 @@ export MAVEN_HOME="/usr/local/maven"
 export MAVEN_OPTS="-Xmx1024m"
 export M2_REPO="$HOME/.m2/repository"
 
-export PATH="/Users/mdesrosiers/bin:$MAVEN_HOME/bin:$PATH"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
